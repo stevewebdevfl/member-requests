@@ -3,9 +3,13 @@
 <div class="container">
   <div class="user_page">
     <h2>
-      YOUR HOME PAGE
+      Your Home Page
     </h2>
-    <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
+    <div class="session_info">
+      <p>
+        <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
+      </p>
+    </div>
     <div id="flash_messages">
       <% flash.each do |key, value| %>
         <%= content_tag(:div, value, :class => "flash #{key}") %>
