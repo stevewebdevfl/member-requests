@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
       redirect_to show_path
     else
       flash[:alert] = "There was a problem logging you in."
+      # redirect_to login_path
       redirect_to login_path
     end
   end

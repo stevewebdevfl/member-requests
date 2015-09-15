@@ -2,10 +2,12 @@
 
 <div class="container">
   <div class="rank_page">
-    <h3>
-      REQUESTS RANKING BY VOTES
-    </h3>
-    <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
+    <h2>
+      Requests by Votes
+    </h2>
+    <div class="session_info">
+      <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
+    </div>
     <br></br>
     <% if @gprequests.count > 0 %>
       <% @gprequest_rank.each do |request| %>
@@ -15,7 +17,9 @@
         <br></br>
       <% end %>
     <% else %>
-      <%= "There are no open requests" %>
+      <div class="no_open_req">
+        <%= "There are no open requests" %>
+      </div>
     <% end %>
   </div>
 </div>

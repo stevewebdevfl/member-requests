@@ -2,20 +2,42 @@
 
 <div class="container">
   <div class="your_req_page">
-    <h3>
-      YOUR REQUESTS
-    </h3>
-    <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
+    <h2>
+      Your Requests
+    </h2>
+    <div class="session_info">
+      <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
+    </div>
     <br></br>
-    <% if @gprequests.count > 0 %>
-      <% @gprequests.each do |gprequest| %>
-        <p>
-        <% vote_count = vote_count(gprequest) %>
-        <%= "Request ID: #{gprequest.id}, title: '#{gprequest.title}', description: '#{gprequest.description}', (#{vote_count} votes)" %>
-        </p>
+    <div class="request_list">
+      <% if @gprequests.count > 0 %>
+        <% @gprequests.each do |gprequest| %>
+            <% vote_count = vote_count(gprequest) %>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Req ID</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Votes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>gprequest.id</td>
+                  <td>gprequest.title</td>
+                  <td>gprequest.description</td>
+                  <td>vote_count</td>
+                </tr>
+              </tbody>
+              <%#= "Request ID: #{gprequest.id}, title: '#{gprequest.title}', description: '#{gprequest.description}', (#{vote_count} votes)" %>
+            </table>
+        <% end %>
+      <% else %>
+        <div class="no_open_req">
+          <%= "You have no open requests" %>
+        </div>
       <% end %>
-    <% else %>
-      <%= "You have no open requests" %>
-    <% end %>
+    </div>
   </div>
 </div>

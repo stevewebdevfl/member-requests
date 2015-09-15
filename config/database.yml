@@ -7,19 +7,19 @@
 
 development:
   adapter: postgresql
-  database: db/development
+  database: db/memreq_dev
   pool: 5
   timeout: 5000
 
 test:
   adapter: postgresql
-  database: db/test
+  database: db/memreq_test
   pool: 5
   timeout: 5000
 
 production:
   adapter: postgresql
-  database: db/production
+  database: db/memreq_prod
   pool: 5
   timeout: 5000
 

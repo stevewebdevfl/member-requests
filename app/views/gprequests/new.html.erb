@@ -1,38 +1,20 @@
 <!-- app/views/gprequests/new.html.erb -->
 
-<div class="container">
-  <div class="post_page">
-    <h2>
-      Post A New Request
-    </h2>
-    <div class="session_info">
+<div class="post-page">
+  <h2>Post A New Request</h2>
+
+  <div class="session_info">
+    <p>
       <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
-    </div>
-    <br></br>
-    <form role="form" class="form-horizontal">
-        <div class="form-group">
-          <label class="control-label" for="title" required>Title</label>
-          <input type="text" class="form-control" id="title">
-        </div>
-        <div class="form-group">
-          <label class="control-label" for="description">Description</label>
-          <textarea class="span6" rows="3" ></textarea>
-          <!-- <input type="textarea" class="form-control" id="description"> -->
-        </div>
-      </form>
-      <div class="button">
-        <button type="submit" class="btn btn-default">Submit</button>
-      </div>
-
+    </p>
   </div>
+
+  <!-- <%#= form_for @gprequest do |f| %>
+    <%#= f.hidden_field :user_id, :value => session[:user_id] %>
+    <%#= f.label :title %>
+    <%#= f.text_field :title %>
+    <%#= f.label :description %>
+    <%#= f.text_field :description %>
+    <%#= f.submit "Post" %>
+  <%# end %> -->
 </div>
-
-
-    <%#= form_for @gprequest do |f| %>
-      <%#= f.hidden_field :user_id, :value => session[:user_id] %>
-      <%#= f.label :title %>
-      <%#= f.text_field :title %>
-      <%#= f.label :description %>
-      <%#= f.text_field :description %>
-      <%#= f.submit "Post" %>
-    <%# end %>

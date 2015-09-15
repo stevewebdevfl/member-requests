@@ -1,49 +1,14 @@
 <!-- app/views/sessions/new.html.erb -->
 
-  <div class="container">
-    <div class="login_page">
-      <h2>
-        Sign In
-      </h2>
+  <div class="login-page">
+    <h2>Sign In</h2>
+    
+    <%= form_tag login_path %>
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
 
-      <form role="form" class="form-horizontal">
-        <div class="form-group">
-          <label class="control-label" for="email">Email</label>
-          <input type="email" class="form-control" id="email">
-        </div>
-        <div class="form-group">
-          <label class="control-label" for="password">Password</label>
-          <input type="text" class="form-control" id="password">
-        </div>
-      </form>
-      <div class="button">
-        <button type="submit" class="btn btn-default">Log In</button>
-      </div>
-      <div class="no_login">
-        <p>
-          Not signed up? -        
-          <%= link_to " sign up now", signup_path %>
-        </p>
-      </div>
-    </div>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+
+    <%= submit_tag "Log in" %>
   </div>
-
-    <!--
-    <form action="demo_form.asp">
-      Email: <input type="text" name="email" size="35"><br>
-      PIN: <input type="text" name="password" maxlength="4" size="4"><br>
-      <input type="submit" value="Submit">
-    </form>
-    -->
-    <!--
-    <div class="login_form">
-      <%#= form_tag login_path %>
-      <%#= label_tag :email %>
-      <%#= text_field_tag :email %>
-
-      <%#= label_tag :password %>
-      <%#= password_field_tag :password %>
-
-      <%#= submit_tag "Log in" %>
-    </div>
-    -->

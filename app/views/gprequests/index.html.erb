@@ -1,11 +1,13 @@
 <%# app/views/gprequests/index.html.erb %>
 
 <div class="container">
-  <div class="view_req_page">
-    <h3>
-      OPEN REQUESTS
-    </h3>
-    <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
+  <div class="open_req_page">
+    <h2>
+      Open Requests
+    </h2>
+    <div class="session_info">
+      <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
+    </div>
     <br></br>
     <% if @gprequests.count > 0 %>
       <% if @allow_vote %>
@@ -34,7 +36,9 @@
         <% end %>
       <% end %>
     <% else %>
-      <%= "There are no open requests" %>
+      <div class="no_open_req">
+        <%= "There are no open requests" %>
+      </div>
     <% end %>
   </div>
 </div>

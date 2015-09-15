@@ -20,105 +20,151 @@ body {
   position: fixed;
   top: 35%;
   left: 35%;
-  margin-top: -50px;
-  margin-left: -100px;
+  margin-top: -115px;
+  margin-left: -85px;
 }
 .home_page h3 {
   display: inline-block;
-  font-size: 32px;
+  font-size: 30px;
   font-style: italic;
   margin: 0px 0px 20px;
 }
 .home_links {
   font-size: 20px;
   text-align: center;
-}
-.login_page {
+} 
+.login-page {
   position: fixed;
   top: 25%;
   left: 35%;
   margin-top: -40px;
-  margin-left: 95px;
+  margin-left: -50px;
 }
-.login_page h2 {
+.login-page h2 {
   text-align: center;
   display: inline-block;
   font-size: 27px;
   font-style: italic;
   margin-top: -50px;
-  margin-bottom: 4px;
-  margin-left: 40px;
+  margin-bottom: 30px;
+  margin-left: 185px;
 }
-.login_page .button {
-  margin-top: 15px;
-  margin-bottom: 17px;
-  margin-left: 51px;
-}
-.no_login {
-  font-size: 14px;
-  margin-top: 144x;
-  margin-left: -4px;
-}
-.signup_page {
+.signup-page {
   position: fixed;
   top: 25%;
   left: 35%;
-  margin-top: -50px;
-  margin-left: 95px;
+  margin-top: -40px;
+  margin-left: -150px;
 }
-.signup_page h2 {
+.signup-page h2 {
+  text-align: center;
   display: inline-block;
   font-size: 27px;
   font-style: italic;
-  margin: 0px 50px 5px 40px;
+  margin-top: -50px;
+  margin-bottom: 30px;
+  margin-left: 280px;
 }
-.signup_page .button {
-  margin-top: 19px;
-  margin-left: 52px;
-}
-.user_page {
+.user-page {
   position: fixed;
   top: 22%;
   left: 35%;
   margin-top: -50px;
   margin-left: 75px;
 }
-.user_page h2 {
+.user-page h2 {
   display: inline-block;
   font-size: 27px;
   font-style: italic;
   margin-bottom: 22px;
 }
-.user_page .session_info {
+.user-page .session-info {
   font-size: 17px;
-  margin-left: 48px;
+  margin-left: -12px;
 }
-.post_page {
+.sess-em {
+  font-style: bold;
+}
+.sess-uid {
+  font-style: bold;
+}
+.post-page {
   position: fixed;
   top: 25%;
   left: 35%;
   margin-top: -50px;
   margin-left: 50px;
 }
-.post_page h2 {
+.post-page h2 {
   display: inline-block;
   font-size: 27px;
   font-style: italic;
   margin: 0px 0px 20px;
 }
-.post_page .session_info {
+.post-page .session_info {
   font-size: 17px;
-  margin-left: 70px;
+  margin-left: 5px;
+  margin-bottom: -50px;
 }
-.post_page .form-horizontal {
-  margin-left: 10px;
-  margin-top: -35px;
+.your_req_page {
+  position: fixed;
+  top: 25%;
+  left: 35%;
+  margin-top: -50px;
+  margin-left: 100px;
 }
-.post_page .button {
-  margin-top: 19px;
-  margin-left: 93px;
+.your_req_page h2 {
+  display: inline-block;
+  font-size: 27px;
+  font-style: italic;
+  margin: 0px 0px 12px;
 }
-
+.your_req_page .session_info {
+  font-size: 17px;
+  margin-left: 31px;
+  margin-bottom: -6px;
+}
+.no_open_req {
+  font-size: 17px;
+  margin-left: -15px;
+}
+.open_req_page {
+  position: fixed;
+  top: 25%;
+  left: 35%;
+  margin-top: -50px;
+  margin-left: 100px;
+}
+.open_req_page h2 {
+  display: inline-block;
+  font-size: 27px;
+  font-style: italic;
+  margin: 0px 0px 12px;
+}
+.open_req_page .session_info {
+  font-size: 17px;
+  margin-left: 31px;
+  margin-bottom: -6px;
+}
+.rank_page {
+  position: fixed;
+  top: 25%;
+  left: 35%;
+  margin-top: -50px;
+  margin-left: 100px;
+}
+.rank_page h2 {
+  display: inline-block;
+  font-size: 27px;
+  font-style: italic;
+  margin-left: -25px;
+  margin-bottom: 12px;
+}
+.rank_page .session_info {
+  font-size: 17px;
+  margin-left: 31px;
+  margin-bottom: -6px;
+}
 
 
 
