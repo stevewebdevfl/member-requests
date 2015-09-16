@@ -16,20 +16,20 @@ body {
   font-size: 16px;
   color: white;
 }
-.home_page {
+.home-page {
   position: fixed;
   top: 35%;
   left: 35%;
   margin-top: -115px;
   margin-left: -85px;
 }
-.home_page h3 {
+.home-page h3 {
   display: inline-block;
   font-size: 30px;
   font-style: italic;
   margin: 0px 0px 20px;
 }
-.home_links {
+.home-links {
   font-size: 20px;
   text-align: center;
 } 
@@ -82,85 +82,80 @@ body {
   font-size: 17px;
   margin-left: -12px;
 }
-.sess-em {
-  font-style: bold;
-}
-.sess-uid {
-  font-style: bold;
-}
 .post-page {
   position: fixed;
-  top: 25%;
+  top: 21%;
   left: 35%;
-  margin-top: -50px;
-  margin-left: 50px;
+  margin-top: -65px;
+  margin-left: -40px;
 }
 .post-page h2 {
   display: inline-block;
   font-size: 27px;
   font-style: italic;
-  margin: 0px 0px 20px;
+  margin-left: 75px;
+  margin-bottom: 20px;
 }
-.post-page .session_info {
+.post-page .session-info {
   font-size: 17px;
-  margin-left: 5px;
-  margin-bottom: -50px;
+  margin-left: 80px;
+  margin-bottom: 28px;
 }
-.your_req_page {
+.your-req-page {
   position: fixed;
   top: 25%;
   left: 35%;
   margin-top: -50px;
   margin-left: 100px;
 }
-.your_req_page h2 {
+.your-req-page h2 {
   display: inline-block;
   font-size: 27px;
   font-style: italic;
   margin: 0px 0px 12px;
 }
-.your_req_page .session_info {
+.your-req-page .session-info {
   font-size: 17px;
   margin-left: 31px;
   margin-bottom: -6px;
 }
-.no_open_req {
+.no-open-req {
   font-size: 17px;
   margin-left: -15px;
 }
-.open_req_page {
+.open-req-page {
   position: fixed;
   top: 25%;
   left: 35%;
   margin-top: -50px;
   margin-left: 100px;
 }
-.open_req_page h2 {
+.open-req-page h2 {
   display: inline-block;
   font-size: 27px;
   font-style: italic;
   margin: 0px 0px 12px;
 }
-.open_req_page .session_info {
+.open-req-page .session-info {
   font-size: 17px;
   margin-left: 31px;
   margin-bottom: -6px;
 }
-.rank_page {
+.rank-page {
   position: fixed;
   top: 25%;
   left: 35%;
   margin-top: -50px;
   margin-left: 100px;
 }
-.rank_page h2 {
+.rank-page h2 {
   display: inline-block;
   font-size: 27px;
   font-style: italic;
   margin-left: -25px;
   margin-bottom: 12px;
 }
-.rank_page .session_info {
+.rank-page .session-info {
   font-size: 17px;
   margin-left: 31px;
   margin-bottom: -6px;

@@ -6,11 +6,9 @@
       Your Home Page
     </h2>
     <div class="session-info">
-      <p>
         <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
-      </p>
     </div>
-    <div id="flash_messages">
+    <div id="flash-messages">
       <% flash.each do |key, value| %>
         <%= content_tag(:div, value, :class => "flash #{key}") %>
       <% end %>

@@ -3,18 +3,16 @@
 <div class="post-page">
   <h2>Post A New Request</h2>
 
-  <div class="session_info">
-    <p>
-      <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
-    </p>
+  <div class="session-info">
+    <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
   </div>
 
-  <!-- <%#= form_for @gprequest do |f| %>
-    <%#= f.hidden_field :user_id, :value => session[:user_id] %>
-    <%#= f.label :title %>
-    <%#= f.text_field :title %>
-    <%#= f.label :description %>
-    <%#= f.text_field :description %>
-    <%#= f.submit "Post" %>
-  <%# end %> -->
+  <%= form_for @gprequest do |f| %>
+    <%= f.hidden_field :user_id, :value => session[:user_id] %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.submit "Post" %>
+  <%end %>
 </div>

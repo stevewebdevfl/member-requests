@@ -1,40 +1,38 @@
 <!-- app/views/gprequests/show.html.erb -->
 
 <div class="container">
-  <div class="your_req_page">
+  <div class="your-req-page">
     <h2>
       Your Requests
     </h2>
-    <div class="session_info">
+    <div class="session-info">
       <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
     </div>
-    <br></br>
-    <div class="request_list">
+    <div class="request-list">
       <% if @gprequests.count > 0 %>
+        <thead>
+          <tr>
+            <th>Req ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Votes</th>
+          </tr>
+        </thead>
         <% @gprequests.each do |gprequest| %>
             <% vote_count = vote_count(gprequest) %>
             <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Req ID</th>
-                  <th>Title</th>
-                  <th>Description</th>
-                  <th>Votes</th>
-                </tr>
-              </thead>
               <tbody>
                 <tr>
-                  <td>gprequest.id</td>
-                  <td>gprequest.title</td>
-                  <td>gprequest.description</td>
-                  <td>vote_count</td>
+                  <td><%= "#{gprequest.id}" %></td>
+                  <td><%= "#{gprequest.title}" %></td>
+                  <td><%= "#{gprequest.description}" %></td>
+                  <td><%= "#{vote_count}" %></td> 
                 </tr>
-              </tbody>
-              <%#= "Request ID: #{gprequest.id}, title: '#{gprequest.title}', description: '#{gprequest.description}', (#{vote_count} votes)" %>
+              </tbody> 
             </table>
         <% end %>
       <% else %>
-        <div class="no_open_req">
+        <div class="no-open-req">
           <%= "You have no open requests" %>
         </div>
       <% end %>

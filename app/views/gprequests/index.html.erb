@@ -8,31 +8,49 @@
     <div class="session_info">
       <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
     </div>
-    <br></br>
     <% if @gprequests.count > 0 %>
+      <% if !@allow_vote %>
+        <div class="row">
+        <%= "(You have already voted)" %>
+        </div>
+      <% end %>
+      <thead>
+        <tr>
+          <th>Req ID</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Votes</th>
+        </tr>
+      </thead>
       <% if @allow_vote %>
         <% @gprequests.each do | gprequest | %>
-            <% vote_count = vote_count(gprequest) %>
-        <tr>
-          <td><%= "Request ID: #{gprequest.id}; " %>
-          <td><%= "Title: '#{gprequest.title}'; " %></td>
-          <td><%= "Description: '#{gprequest.description}' - " %></td>
-          <td><%= "has #{vote_count} votes" %><td>
-          <td><%=  button_to 'Vote for this request', user_vote_path(id: gprequest.id) %></td>    
-        </tr>
+          <% vote_count = vote_count(gprequest) %>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <td><%= "#{gprequest.id}" %></td>
+                <td><%= "#{gprequest.title}" %></td>
+                <td><%= "#{gprequest.description}" %></td>
+                <td><%= "#{vote_count}" %></td>
+                <td><%=  button_to 'Vote for this request', user_vote_path(id: gprequest.id) %></td>
+              </tr>
+            </tbody> 
+          </table>
         <% end %>
       <% end %>
       <% if !@allow_vote %>
-        <%= "(You have already voted)" %>
         <% @gprequests.each do | gprequest | %>
-          <p>
-          <tr>
-            <td><%= "Request ID: #{gprequest.id}; " %>
-            <td><%= "Title: '#{gprequest.title}'; " %></td>
-            <td><%= "Description: '#{gprequest.description}' - " %></td>
-            <td><%= "has #{gprequest.votes.count} votes" %><td>    
-          </tr>
-          </p>
+          <% vote_count = vote_count(gprequest) %>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <td><%= "#{gprequest.id}" %></td>
+                <td><%= "#{gprequest.title}" %></td>
+                <td><%= "#{gprequest.description}" %></td>
+                <td><%= "#{vote_count}" %></td> 
+              </tr>
+            </tbody>
+          </table>
         <% end %>
       <% end %>
     <% else %>
