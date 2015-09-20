@@ -1,0 +1,17 @@
+MEMBER REQUESTS CHECKLIST
+
+- Flash messages
+- Focus on first entry field
+- Show only links matching current page
+- Session info - dry up code to clear session hash
+- Helper methods for forms?: e.g., http://apidock.com/rails/ActionView/Helpers/FormTagHelper/label_tag
+- Proper validation of email: e.g., validate_email_format_of
+- 
+
+
+
+
+==> ADD TO README file
+- email validation only as required; format not validated
+- Pages intended for active sessions only can be accessed when not logged in (though none of the corresponding actions can be completed).
+- 

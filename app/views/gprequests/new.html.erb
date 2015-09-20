@@ -6,6 +6,11 @@
   <div class="session-info">
     <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
   </div>
+  <div id="flash-messages">
+    <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, :class => "flash #{key}") %>
+    <% end %>
+  </div>
 
   <%= form_for @gprequest do |f| %>
     <%= f.hidden_field :user_id, :value => session[:user_id] %>

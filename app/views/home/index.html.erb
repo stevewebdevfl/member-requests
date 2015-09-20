@@ -5,6 +5,11 @@
     <h3>
       <%= "WELCOME TO MEMBER REQUESTS" %>
     </h3>
+    <div id="flash-messages">
+      <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, :class => "flash #{key}") %>
+      <% end %>
+    </div>
 
     <div class="home-links">
       <%= link_to "Sign In", login_path %>

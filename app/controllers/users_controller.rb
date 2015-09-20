@@ -1,15 +1,23 @@
 class UsersController < ApplicationController
 
   def show
+    if !session[:user_id]
+      flash[:notice] = "Please log in to access the Session Home page"
+      redirect_to home_path
+    end
   end
 
   def new
+    if session[:user_id]
+      flash[:notice] = "If you would like to add a new user, please log out"
+      redirect_to show_path
+    end
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:notice] = "Welcome to the site!  Please log in"
+      flash[:notice] = "You have been added as a new user.  Please sign in."
       redirect_to login_path
     else
       flash[:alert] = "There was a problem creating your account. Please try again."

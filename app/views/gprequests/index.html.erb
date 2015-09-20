@@ -8,10 +8,15 @@
     <div class="session_info">
       <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
     </div>
+    <div id="flash-messages">
+      <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, :class => "flash #{key}") %>
+      <% end %>
+    </div>
     <% if @gprequests.count > 0 %>
       <% if !@allow_vote %>
         <div class="row">
-        <%= "(You have already voted)" %>
+        <%= "Voting disabled - you have already voted" %>
         </div>
       <% end %>
       <thead>

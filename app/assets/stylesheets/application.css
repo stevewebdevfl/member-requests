@@ -82,6 +82,11 @@ body {
   font-size: 17px;
   margin-left: -12px;
 }
+/*
+.user-page #flash-messages {
+  font-size: 15px;
+}
+*/
 .post-page {
   position: fixed;
   top: 21%;
