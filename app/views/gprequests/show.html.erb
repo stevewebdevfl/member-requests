@@ -6,7 +6,7 @@
       Your Requests
     </h2>
     <div class="session-info">
-      <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
+      <%= "You are logged in as #{session[:email]} (user id: #{session[:user_id]})" %>
     </div>
     <div id="flash-messages">
       <% flash.each do |key, value| %>

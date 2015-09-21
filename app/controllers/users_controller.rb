@@ -2,14 +2,14 @@ class UsersController < ApplicationController
 
   def show
     if !session[:user_id]
-      flash[:notice] = "(Please log in to access the Session Home page)"
+      flash[:notice] = "(Sign in to access the Session Home page)"
       redirect_to home_path
     end
   end
 
   def new
     if session[:user_id]
-      flash[:notice] = "(If you would like to add a new user, please log out)"
+      flash[:notice] = "(To add a new user, please log out)"
       redirect_to show_path
     end
   end

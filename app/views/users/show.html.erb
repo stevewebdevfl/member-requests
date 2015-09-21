@@ -3,15 +3,15 @@
 <div class="container">
   <div class="user-page">
     <h2>
-      Your Home Page
+      Session Home Page
     </h2>
-    <div class="session-info">
-        <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
-    </div>
     <div id="flash-messages">
       <% flash.each do |key, value| %>
         <%= content_tag(:div, value, :class => "flash #{key}") %>
       <% end %>
+    </div>
+    <div class="session-info">
+      <%= "You are logged in as #{session[:email]} (user id: #{session[:user_id]})" %>
     </div>
   </div>
 </div>

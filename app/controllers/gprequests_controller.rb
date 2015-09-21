@@ -12,7 +12,7 @@ class GprequestsController < ApplicationController
 
   def new
     if !session[:user_id]
-      flash[:notice] = "(Please log in to access the Post Requests page)"
+      flash[:notice] = "(Sign in to access the Post Requests page)"
       redirect_to home_path
     else
       @gprequest = Gprequest.new
@@ -21,7 +21,7 @@ class GprequestsController < ApplicationController
 
   def index
     if !session[:user_id]
-      flash[:notice] = "(Please log in to access the Open Requests page)"
+      flash[:notice] = "(Sign in to access the Open Requests page)"
       redirect_to home_path
     else
       @votecount = Vote.count
@@ -36,7 +36,7 @@ class GprequestsController < ApplicationController
 
   def show
     if !session[:user_id]
-      flash[:notice] = "(Please log in to access the Your Requests page)"
+      flash[:notice] = "(Sign in to access the Your Requests page)"
       redirect_to home_path
     else
       @gprequests = Gprequest.where(user_id: session[:user_id])
@@ -56,7 +56,7 @@ class GprequestsController < ApplicationController
 
   def rank
     if !session[:user_id]
-      flash[:notice] = "(Please log in to access the Rank Requests page)"
+      flash[:notice] = "(Sign in to access the Rank Requests page)"
       redirect_to home_path
     else
       @gprequests = Gprequest.all

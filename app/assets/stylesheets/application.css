@@ -10,7 +10,7 @@ body {
 }
 .navbar-brand {
   font-size: 23px;
-  margin-right: 66px;
+  margin-right: 50px;
 }
 .hdrtext {
   font-size: 16px;
@@ -20,24 +20,27 @@ body {
   position: fixed;
   top: 35%;
   left: 35%;
-  margin-top: -115px;
-  margin-left: -85px;
+  margin-top: -110px;
+  text-align: center;
+  /* margin-left: -25px; */
 }
-.home-page h3 {
+.home-page h2 {
   display: inline-block;
-  font-size: 30px;
+  font-size: 27px;
   font-style: italic;
-  margin: 0px 0px 20px;
+  margin: -90px 0px 30px;
 }
 .home-page #flash-messages {
-  font-size: 15px;
+  font-size: 16px;
   color: #660000;
   font-style: italic;
   text-align: center;
-  margin-bottom: 15px;
+  margin-left: -3px;
+  margin-bottom: 20px;
 }
 .home-page .home-links {
   font-size: 20px;
+  margin-left: 0px;
   text-align: center;
 } 
 .login-page {
@@ -83,7 +86,7 @@ body {
   display: inline-block;
   font-size: 27px;
   font-style: italic;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 .user-page #flash-messages {
   font-size: 15px;
@@ -91,11 +94,16 @@ body {
   font-style: italic;
   text-align: center;
   margin-bottom: 15px;
-  margin-left: -12px;
+  margin-left: -29px;
+}
+.user-page .session-info {
+  font-size: 15px;
+  font-style: italic;
+  margin-left: -29px;
 }
 .post-page {
   position: fixed;
-  top: 21%;
+  top: 23%;
   left: 35%;
   margin-top: -65px;
   margin-left: -40px;
@@ -104,7 +112,7 @@ body {
   display: inline-block;
   font-size: 27px;
   font-style: italic;
-  margin-left: 75px;
+  margin-left: 121px;
   margin-bottom: 20px;
 }
 .post-page #flash-messages {
@@ -116,12 +124,12 @@ body {
 }
 .post-page .session-info {
   font-size: 17px;
-  margin-left: 80px;
+  margin-left: 104px;
   margin-bottom: 28px;
 }
 .your-req-page {
   position: fixed;
-  top: 25%;
+  top: 24%;
   left: 35%;
   margin-top: -50px;
   margin-left: 100px;
@@ -141,8 +149,11 @@ body {
 }
 .your-req-page .session-info {
   font-size: 17px;
-  margin-left: 31px;
-  margin-bottom: -6px;
+  margin-left: -76px;
+  margin-bottom: 25px;
+}
+.your-req-page .request-list {
+  margin-left: -118px;
 }
 .no-open-req {
   font-size: 17px;
@@ -159,25 +170,28 @@ body {
   display: inline-block;
   font-size: 27px;
   font-style: italic;
-  margin: 0px 0px 12px;
+  margin: 0px 0px 8px;
 }
 .open-req-page #flash-messages {
   font-size: 15px;
   color: #660000;
   font-style: italic;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
 }
 .open-req-page .session-info {
-  font-size: 17px;
-  margin-left: 31px;
-  margin-bottom: -6px;
+  font-size: 15px;
+  font-style: italic;
+  margin-left: -34px;
+}
+.open-req-page .request-list {
+  margin-left: -118px;
 }
 .rank-page {
   position: fixed;
   top: 25%;
   left: 35%;
-  margin-top: -50px;
+  margin-top: -73px;
   margin-left: 100px;
 }
 .rank-page h2 {
@@ -196,8 +210,11 @@ body {
 }
 .rank-page .session-info {
   font-size: 17px;
-  margin-left: 31px;
-  margin-bottom: -6px;
+  margin-left: -84px;
+  margin-bottom: 25px;
+}
+.rank-page .request-list {
+  margin-left: -126px;
 }
 
 

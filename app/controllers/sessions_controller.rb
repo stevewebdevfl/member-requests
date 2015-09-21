@@ -1,15 +1,15 @@
 class SessionsController < ApplicationController
   def new
     if session[:user_id]
-      flash[:notice] = "You are already logged in"
-      redirect_to home_path
+      flash[:notice] = "(You are already signed in)"
+      redirect_to show_path
     end
   end
 
   def create
     @user = User.authenticate(params[:email], params[:password])
     if @user
-      flash[:notice] = "You are now loged in"
+      flash[:notice] = "You are now logged in"
       session[:user_id] = @user.id
       session[:email] = @user.email
       redirect_to show_path
@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
 
   def destroy
     if !session[:user_id]
-      flash[:notice] = "(Sign out is not possible unless you are signed in)"
+      flash[:notice] = "(You are not signed in)"
       redirect_to home_path
     else
       session.clear

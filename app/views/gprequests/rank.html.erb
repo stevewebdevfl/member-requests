@@ -5,36 +5,38 @@
     <h2>
       Requests by Votes
     </h2>
-    <div class="session_info">
-      <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
+    <div class="session-info">
+      <%= "You are logged in as #{session[:email]} (user id: #{session[:user_id]})" %>
     </div>
-    <% if @gprequests.count > 0 %>
-      <thead>
-        <tr>
-          <th>Req ID</th>
-          <th>Title</th>
-          <th>Description</th>
-          <th>Votes</th>
-        </tr>
-      </thead>
-      <% @gprequest_rank.each do |request| %>
-        <% request_id = request[0] %>
-        <% gprequest = Gprequest.find(request_id) %>
-        <table class="table table-striped">
-          <tbody>
-            <tr>
-              <td><%= "#{gprequest.id}" %></td>
-              <td><%= "#{gprequest.title}" %></td>
-              <td><%= "#{gprequest.description}" %></td>
-              <td><%= "#{request[1]}" %></td>                  
-            </tr>
-          </tbody> 
-        </table>
+    <div class="request-list">
+      <% if @gprequests.count > 0 %>
+        <thead>
+          <tr>
+            <th>Req ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Votes</th>
+          </tr>
+        </thead>
+        <% @gprequest_rank.each do |request| %>
+          <% request_id = request[0] %>
+          <% gprequest = Gprequest.find(request_id) %>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <td><%= "#{gprequest.id}" %></td>
+                <td><%= "#{gprequest.title}" %></td>
+                <td><%= "#{gprequest.description}" %></td>
+                <td><%= "#{request[1]}" %></td>                  
+              </tr>
+            </tbody> 
+          </table>
+        <% end %>
+      <% else %>
+        <div class="no-open-req">
+          <%= "There are no open requests" %>
+        </div>
       <% end %>
-    <% else %>
-      <div class="no-open-req">
-        <%= "There are no open requests" %>
-      </div>
-    <% end %>
+    </div>
   </div>
 </div>

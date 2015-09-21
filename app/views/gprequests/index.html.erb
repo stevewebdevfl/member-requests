@@ -1,68 +1,70 @@
 <%# app/views/gprequests/index.html.erb %>
 
 <div class="container">
-  <div class="open_req_page">
+  <div class="open-req-page">
     <h2>
       Open Requests
     </h2>
-    <div class="session_info">
-      <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
-    </div>
     <div id="flash-messages">
       <% flash.each do |key, value| %>
         <%= content_tag(:div, value, :class => "flash #{key}") %>
       <% end %>
     </div>
-    <% if @gprequests.count > 0 %>
-      <% if !@allow_vote %>
-        <div class="row">
-        <%= "Voting disabled - you have already voted" %>
+    <div class="session-info">
+      <%= "You are logged in as #{session[:email]} (user id: #{session[:user_id]})" %>
+    </div>
+    <div class="request-list">
+      <% if @gprequests.count > 0 %>
+        <% if !@allow_vote %>
+          <div class="row">
+          <%= "Voting disabled - you have already voted" %>
+          </div>
+        <% end %>
+        <thead>
+          <tr>
+            <th>Req ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Votes</th>
+          </tr>
+        </thead>
+        <% if @allow_vote %>
+          <% @gprequests.each do | gprequest | %>
+            <% vote_count = vote_count(gprequest) %>
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td><%= "#{gprequest.id}" %></td>
+                  <td><%= "#{gprequest.title}" %></td>
+                  <td><%= "#{gprequest.description}" %></td>
+                  <td><%= "#{vote_count}" %></td>
+                  <td><%=  button_to 'Vote for this request', user_vote_path(id: gprequest.id) %></td>
+                </tr>
+              </tbody> 
+            </table>
+          <% end %>
+        <% end %>
+        <% if !@allow_vote %>
+          <% @gprequests.each do | gprequest | %>
+            <% vote_count = vote_count(gprequest) %>
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td><%= "#{gprequest.id}" %></td>
+                  <td><%= "#{gprequest.title}" %></td>
+                  <td><%= "#{gprequest.description}" %></td>
+                  <td><%= "#{vote_count}" %></td> 
+                </tr>
+              </tbody>
+            </table>
+          <% end %>
+        <% end %>
+      <% else %>
+        <div class="no-open-req">
+          <%= "There are no open requests" %>
         </div>
       <% end %>
-      <thead>
-        <tr>
-          <th>Req ID</th>
-          <th>Title</th>
-          <th>Description</th>
-          <th>Votes</th>
-        </tr>
-      </thead>
-      <% if @allow_vote %>
-        <% @gprequests.each do | gprequest | %>
-          <% vote_count = vote_count(gprequest) %>
-          <table class="table table-striped">
-            <tbody>
-              <tr>
-                <td><%= "#{gprequest.id}" %></td>
-                <td><%= "#{gprequest.title}" %></td>
-                <td><%= "#{gprequest.description}" %></td>
-                <td><%= "#{vote_count}" %></td>
-                <td><%=  button_to 'Vote for this request', user_vote_path(id: gprequest.id) %></td>
-              </tr>
-            </tbody> 
-          </table>
-        <% end %>
-      <% end %>
-      <% if !@allow_vote %>
-        <% @gprequests.each do | gprequest | %>
-          <% vote_count = vote_count(gprequest) %>
-          <table class="table table-striped">
-            <tbody>
-              <tr>
-                <td><%= "#{gprequest.id}" %></td>
-                <td><%= "#{gprequest.title}" %></td>
-                <td><%= "#{gprequest.description}" %></td>
-                <td><%= "#{vote_count}" %></td> 
-              </tr>
-            </tbody>
-          </table>
-        <% end %>
-      <% end %>
-    <% else %>
-      <div class="no_open_req">
-        <%= "There are no open requests" %>
-      </div>
-    <% end %>
+    </div>
   </div>
 </div>
 
