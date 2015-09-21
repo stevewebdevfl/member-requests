@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
 
   def destroy
     if !session[:user_id]
-      flash[:notice] = "Sign out is not possible unless you are signed in"
+      flash[:notice] = "(Sign out is not possible unless you are signed in)"
       redirect_to home_path
     else
       session.clear

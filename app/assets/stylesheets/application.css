@@ -29,7 +29,14 @@ body {
   font-style: italic;
   margin: 0px 0px 20px;
 }
-.home-links {
+.home-page #flash-messages {
+  font-size: 15px;
+  color: #660000;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.home-page .home-links {
   font-size: 20px;
   text-align: center;
 } 
@@ -78,15 +85,14 @@ body {
   font-style: italic;
   margin-bottom: 22px;
 }
-.user-page .session-info {
-  font-size: 17px;
-  margin-left: -12px;
-}
-/*
 .user-page #flash-messages {
   font-size: 15px;
+  color: #660000;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-left: -12px;
 }
-*/
 .post-page {
   position: fixed;
   top: 21%;
@@ -100,6 +106,13 @@ body {
   font-style: italic;
   margin-left: 75px;
   margin-bottom: 20px;
+}
+.post-page #flash-messages {
+  font-size: 15px;
+  color: #660000;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 15px;
 }
 .post-page .session-info {
   font-size: 17px;
@@ -118,6 +131,13 @@ body {
   font-size: 27px;
   font-style: italic;
   margin: 0px 0px 12px;
+}
+.your-req-page #flash-messages {
+  font-size: 15px;
+  color: #660000;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 15px;
 }
 .your-req-page .session-info {
   font-size: 17px;
@@ -141,6 +161,13 @@ body {
   font-style: italic;
   margin: 0px 0px 12px;
 }
+.open-req-page #flash-messages {
+  font-size: 15px;
+  color: #660000;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 15px;
+}
 .open-req-page .session-info {
   font-size: 17px;
   margin-left: 31px;
@@ -159,6 +186,13 @@ body {
   font-style: italic;
   margin-left: -25px;
   margin-bottom: 12px;
+}
+.rank-page #flash-messages {
+  font-size: 15px;
+  color: #660000;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 15px;
 }
 .rank-page .session-info {
   font-size: 17px;
