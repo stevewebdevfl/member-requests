@@ -49,7 +49,7 @@ class GprequestsController < ApplicationController
       flash[:success] = "Your request has been posted"
       redirect_to show_req_path
     else
-      flash[:error] = "Your request did not post (confirm title entry)"
+      flash[:error] = "Your request did not post (title is required)"
       redirect_to post_path
     end
   end

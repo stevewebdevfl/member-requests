@@ -1,5 +1,6 @@
 MEMBER REQUESTS CHECKLIST
 
+- Session Info formatting styling not matched on all pages
 - Inspect Element causes content to move up under navbar
 - Rank Requests won't scroll past first screenfull
 - Requests lists formatting

@@ -1,23 +1,37 @@
 <!-- app/views/gprequests/new.html.erb -->
 
 <div class="post-page">
-  <h2>Post A Request</h2>
-
-  <div class="session-info">
-    <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
+  <div class="row">
+    <div class="md-col-12">
+      <h2>Post A Request</h2>
+    </div>
   </div>
-  <div id="flash-messages">
-    <% flash.each do |key, value| %>
-      <%= content_tag(:div, value, :class => "flash #{key}") %>
-    <% end %>
+  <div class="subhead">
+    <div class="row">
+      <div class="md-col-12">
+        <div class="session-info">
+          <%= "You are logged in as #{session[:email]} (user id: #{session[:user_id]})" %>
+        </div>
+        <div id="flash-messages">
+          <% flash.each do |key, value| %>
+            <%= content_tag(:div, value, :class => "flash #{key}") %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <%= form_for @gprequest do |f| %>
-    <%= f.hidden_field :user_id, :value => session[:user_id] %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-    <%= f.submit "Post" %>
-  <%end %>
+  <div class="post-form">
+    <div class="row">
+      <div class="md-col-12">
+        <%= form_for @gprequest do |f| %>
+          <%= f.hidden_field :user_id, :value => session[:user_id] %>
+          <%= f.label :title %>
+          <%= f.text_field :title %>
+          <%= f.label :description %>
+          <%= f.text_field :description %>
+          <%= f.submit "Post" %>
+        <%end %>
+      </div>
+    </div>
+  </div>
 </div>

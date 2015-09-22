@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def new
     if session[:user_id]
-      flash[:notice] = "(To add a new user, please log out)"
+      flash[:notice] = "(To add a new user, please sign out)"
       redirect_to show_path
     end
   end

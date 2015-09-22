@@ -1,26 +1,40 @@
 <!-- member-requests/app/views/users/new.html.erb -->
 
 <div class="signup-page">
-  <h2>Sign Up</h2>
-
-  <div id="flash-messages">
-   <% flash.each do |key, value| %>
-     <%= content_tag(:div, value, :class => "flash #{key}") %>
-    <% end %>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Sign Up</h2>
+    </div>
   </div>
+  <div id="flash-messages">
+    <div class="row">
+      <div class="col-md-12">
+        <% flash.each do |key, value| %>
+          <%= content_tag(:div, value, :class => "flash #{key}") %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <%=form_for User.new do |f| %>
 
-  <%=form_for User.new do |f| %>
+        <%=f.label :email %>
+        <%=f.text_field :email, :autofocus => true %>
 
-    <%=f.label :email %>
-    <%=f.text_field :email, :autofocus => true %>
+        <%=f.label :password %>
+        <%=f.password_field :password %>
 
-    <%=f.label :password %>
-    <%=f.password_field :password %>
+        <%=f.label :password_confirmation, "Confirm Password" %>
+        <%=f.password_field :password_confirmation %>
 
-    <%=f.label :password_confirmation, "Confirm Password" %>
-    <%=f.password_field :password_confirmation %>
-
-    <%=f.submit "Sign Up" %>
-    
-  <% end %>
+        <%=f.submit "Sign Up" %>
+        
+      <% end %>
+    </div>
+  </div>
 </div>
+
+
+
+

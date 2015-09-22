@@ -2,19 +2,30 @@
 
 <div class="container">
   <div class="home-page">
-    <h2>
-      <%= "Member Requests Landing Page" %>
-    </h2>
-    <div id="flash-messages">
-      <% flash.each do |key, value| %>
-        <%= content_tag(:div, value, :class => "flash #{key}") %>
-      <% end %>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>  
+          <%= "Member Requests Landing Page" %>
+        </h2>
+      </div>
     </div>
-
-    <div class="home-links">
-      <%= link_to "Sign In", login_path %>
-      <%= " or " %>
-      <%= link_to "Sign Up", signup_path %>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="flash-messages">
+          <% flash.each do |key, value| %>
+            <%= content_tag(:div, value, :class => "flash #{key}") %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="home-links">
+          <%= link_to "Sign In", login_path %>
+          <%= " or " %>
+          <%= link_to "Sign Up", signup_path %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

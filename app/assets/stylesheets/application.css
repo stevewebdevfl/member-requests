@@ -28,19 +28,20 @@ body {
   display: inline-block;
   font-size: 27px;
   font-style: italic;
-  margin: -90px 0px 30px;
+  text-align: center;
+  /* margin: -90px 0px 30px; */
 }
 .home-page #flash-messages {
   font-size: 16px;
   color: #660000;
   font-style: italic;
   text-align: center;
-  margin-left: -3px;
-  margin-bottom: 20px;
+  /* margin-left: -3px;
+  margin-bottom: 20px; */
 }
 .home-page .home-links {
   font-size: 20px;
-  margin-left: 0px;
+  margin-left: -8px;
   text-align: center;
 } 
 .login-page {
@@ -51,13 +52,12 @@ body {
   margin-left: -50px;
 }
 .login-page h2 {
-  text-align: center;
   display: inline-block;
   font-size: 27px;
   font-style: italic;
   margin-top: -50px;
+  margin-left: 204px;
   margin-bottom: 30px;
-  margin-left: 185px;
 }
 .signup-page {
   position: fixed;
@@ -67,13 +67,12 @@ body {
   margin-left: -150px;
 }
 .signup-page h2 {
-  text-align: center;
   display: inline-block;
   font-size: 27px;
   font-style: italic;
   margin-top: -50px;
+  margin-left: 308px;
   margin-bottom: 30px;
-  margin-left: 280px;
 }
 .user-page {
   position: fixed;
@@ -86,20 +85,24 @@ body {
   display: inline-block;
   font-size: 27px;
   font-style: italic;
+  margin-left: 10px;
   margin-bottom: 18px;
+}
+.user-page .subhead {
+  text-align: center;
+  margin-left: -41px;
 }
 .user-page #flash-messages {
   font-size: 15px;
   color: #660000;
   font-style: italic;
-  text-align: center;
+  /* text-align: center; */
   margin-bottom: 15px;
-  margin-left: -29px;
 }
 .user-page .session-info {
   font-size: 15px;
   font-style: italic;
-  margin-left: -29px;
+  /* text-align: center; */
 }
 .post-page {
   position: fixed;
@@ -123,9 +126,13 @@ body {
   margin-bottom: 15px;
 }
 .post-page .session-info {
-  font-size: 17px;
-  margin-left: 104px;
+  font-size: 16px;
+  font-style: italic;
+  margin-left: 49px;
   margin-bottom: 28px;
+}
+.post-page .post-form {
+  margin-left: -17px;
 }
 .your-req-page {
   position: fixed;
@@ -140,20 +147,22 @@ body {
   font-style: italic;
   margin: 0px 0px 12px;
 }
+.your-req-page .subhead {
+  margin-left: -86px;
+}
 .your-req-page #flash-messages {
   font-size: 15px;
   color: #660000;
   font-style: italic;
-  text-align: center;
   margin-bottom: 15px;
 }
 .your-req-page .session-info {
-  font-size: 17px;
-  margin-left: -76px;
+  font-size: 16px;
+  font-style: italic;
   margin-bottom: 25px;
 }
 .your-req-page .request-list {
-  margin-left: -118px;
+  margin-left: -86px;
 }
 .no-open-req {
   font-size: 17px;
@@ -170,7 +179,7 @@ body {
   display: inline-block;
   font-size: 27px;
   font-style: italic;
-  margin: 0px 0px 8px;
+  margin: -21px 0px 1px;
 }
 .open-req-page #flash-messages {
   font-size: 15px;
@@ -180,12 +189,19 @@ body {
   margin-bottom: 35px;
 }
 .open-req-page .session-info {
-  font-size: 15px;
+  font-size: 16px;
   font-style: italic;
-  margin-left: -34px;
+  margin-left: -59px;
+  margin-bottom: 22px;
 }
 .open-req-page .request-list {
   margin-left: -118px;
+}
+.open-req-page .no-vote {
+  font-size: 15px;
+  font-style: italic;
+  margin-left: 87px;
+  margin-bottom: 33px;
 }
 .rank-page {
   position: fixed;

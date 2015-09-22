@@ -2,16 +2,28 @@
 
 <div class="container">
   <div class="user-page">
-    <h2>
-      Session Home Page
-    </h2>
-    <div id="flash-messages">
-      <% flash.each do |key, value| %>
-        <%= content_tag(:div, value, :class => "flash #{key}") %>
-      <% end %>
-    </div>
-    <div class="session-info">
-      <%= "You are logged in as #{session[:email]} (user id: #{session[:user_id]})" %>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>
+          Session Home Page
+        </h2>
+      </div>
+    </div>    
+    <div class="row subhead">
+      <div class="col-md-12">
+        <div id="flash-messages">
+          <p>
+            <% flash.each do |key, value| %>
+              <%= content_tag(:div, value, :class => "flash #{key}") %>
+            <% end %>
+          </p>
+        </div>
+        <div class="session-info">
+          <p>                                
+            <%= "You are logged in as #{session[:email]} (user id: #{session[:user_id]})" %>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

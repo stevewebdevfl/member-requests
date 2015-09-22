@@ -16,8 +16,8 @@
     <div class="request-list">
       <% if @gprequests.count > 0 %>
         <% if !@allow_vote %>
-          <div class="row">
-          <%= "Voting disabled - you have already voted" %>
+          <div class="no-vote">
+          <%= "(Voting disabled - you have already voted)" %>
           </div>
         <% end %>
         <thead>
